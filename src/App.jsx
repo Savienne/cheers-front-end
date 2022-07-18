@@ -66,7 +66,7 @@ const App = () => {
         />
         <Route
           path="/edit-profile"
-          element={<EditProfile user={user} />}
+          element={<EditProfile user={user} drinks={drinks}/>}
         />
         <Route
           path="/add-song"
