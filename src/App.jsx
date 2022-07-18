@@ -14,6 +14,7 @@ import ProfileDetails from './pages/ProfileDetails/ProfileDetails'
 import MyPageDetails from './pages/MyPageDetails/MyPageDetails'
 import EditProfile from './pages/EditProfile/EditProfile'
 import { drinks } from './data/drink-data'
+import BoozyTunes from './pages/BoozyTunes/BoozyTunes'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -75,6 +76,11 @@ const App = () => {
         <Route
           path="/my-tastes"
           element={<MyTastes drinks={drinks} />}
+        />
+        <Route
+          path="/boozy-tunes"
+          element={<BoozyTunes />}
+          user={user}
         />
         <Route
           path="/changePassword"
