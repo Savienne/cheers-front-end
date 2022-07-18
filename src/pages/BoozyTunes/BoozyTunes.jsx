@@ -1,4 +1,4 @@
-const BoozyTunes= (props) => {
+const BoozyTunes = (props) => {
     // let poll = {
         
     //     question:"Does this song go with this drink?",
@@ -54,27 +54,23 @@ const BoozyTunes= (props) => {
     //     answers[i].querySelector(".percentage-value").innerText = percentage + "%";
     //         }
 
-    //     }
-      
-
-
-
-
+    
+    
+    
     return ( 
         
-      <>
-      <div>
-      <h1>Boozy Tunes</h1>
-      <h2> Boozy Tunes Results</h2>
-      <div class="powr-poll" id="67ac0da7_1658165568"></div><script src="https://www.powr.io/powr.js?platform=react"></script>
-      <h3> 60% of users said YES, THIS SONG goes with THIS DRINK</h3>
-    </div>
-
-      <button>Continue</button> <br></br><button>Cancel</button>
+        <>
+        <div>
+        <h1>Boozy Tunes</h1>
+        <h2> Boozy Tunes Results</h2>
+        <div class="powr-poll" id="67ac0da7_1658165568"></div><script src="https://www.powr.io/powr.js?platform=react"></script>
+        <h3> 60% of users said YES, THIS SONG goes with THIS DRINK</h3>
+      </div>
+  
+        <button>Continue</button> <br></br><button>Cancel</button>
+        </>
+     );
+    }
 
  
-      </>
-    )
-  }
-  
   export default BoozyTunes;
