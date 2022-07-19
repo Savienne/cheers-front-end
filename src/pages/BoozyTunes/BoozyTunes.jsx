@@ -1,30 +1,28 @@
 import React, { useEffect, useState } from "react";
 
-export function DataDisplayer(props) {
-  const [data, setData] = useState(null);
+function BoozyTunes(props) {
+  
+  const [songData, setSongData] = useState([]);
+  const [drinkData, setDrinkData] = useState([]);
 
   useEffect(() => {
   
-    const fetchData = async () => {
+    const fetchDrinkData = async () => {
       const response = await fetch (`https://www.theaudiodb.com/api/v1/json`);
-      const newData =  await response.json();
-      setData(newData)
-    
+      const newDrinkData =  await response.json();
+      setDrinkData(newDrinkData)
     };
-    fetchData();
-}, [props.id]);
+    const fetchSongData = async () => {
+      const response = await fetch (`https://www.theaudiodb.com/api/v1/json`);
+      const newSongData =  await response.json();
+      setSongData(newSongData)
+    }
+    fetchDrinkData();
+    fetchSongData();
+  }, []);
 
-if (data){
-  return <div>{data.name} </div>;
-
-} else {
-  return null;
-}
-}
-
-const BoozyTunes  = (props) => {
-
-
+console.log(songData)
+console.log(drinkData)
 
   return ( 
     <>
