@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from "react";
 import * as pollService from "../../services/pollService";
-
+import { drinks } from "../../data/drink-data"
 function BoozyTunes(props) {
   
   const [songData, setSongData] = useState([]);
   const [drinkData, setDrinkData] = useState([]);
-
-  useEffect(() => {
   
+  useEffect(() => {
+    
     const fetchDrinkData = async () => {
-      const response = await fetch (`https://www.theaudiodb.com/api/v1/json`);
-      const newDrinkData =  await response.json();
+      const response = await fetch (``);
+      console.log(response)
+      const newDrinkData = response.json();
+      console.log(newDrinkData)
       setDrinkData(newDrinkData)
     };
     const fetchSongData = async () => {
-      const response = await fetch (`https://www.theaudiodb.com/api/v1/json`);
+      const response = await fetch (`cors.anywhere/https://www.theaudiodb.com/api/v1/json`);
       const newSongData =  await response.json();
       setSongData(newSongData)
     }
@@ -22,14 +24,21 @@ function BoozyTunes(props) {
     fetchSongData();
   }, []);
 
-console.log(songData)
-console.log(drinkData)
+// console.log(songData)
+// console.log(drinkData)
 
   return ( 
     <>
     <h1>Boozy Tunes</h1>
     <h2> Boozy Tunes Results</h2>
     <h3> 60% of users said YES, THIS SONG goes with THIS DRINK</h3>
+    <p>This list of drinks</p>
+    {drinks.map(drink => 
+      {
+        return <p>{drink.name}</p>
+      }
+
+      )}
 
     <button>Continue</button> <br></br><button>Cancel</button>
 
@@ -48,7 +57,7 @@ console.log(drinkData)
 
     </form> */}
     </>
-   );
+   )
 }
  
   export default BoozyTunes;
