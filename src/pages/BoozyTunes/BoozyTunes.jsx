@@ -1,4 +1,30 @@
+import React, { useEffect, useState } from "react";
+
+export function DataDisplayer(props) {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+  
+    const fetchData = async () => {
+      const response = await fetch (``);
+      const newData =  await response.json();
+      setData(newData)
+    
+    };
+    fetchData();
+}, [props.id]);
+
+if (data){
+  return <div>{data.name} </div>;
+
+} else {
+  return null;
+}
+}
+
 const BoozyTunes  = (props) => {
+
+
 
   return ( 
     <>
@@ -7,6 +33,21 @@ const BoozyTunes  = (props) => {
     <h3> 60% of users said YES, THIS SONG goes with THIS DRINK</h3>
 
     <button>Continue</button> <br></br><button>Cancel</button>
+
+    <form action= "submit" method="POST">
+    <select>
+        <button>Yes</button>
+      <option value="Yes">Yes</option>
+    </select>
+
+    <select>
+        <button>No</button>
+      <option value="No">No</option>
+
+      
+    </select>
+
+    </form>
     </>
    );
 }
