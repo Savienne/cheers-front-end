@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import * as pollService from "../../services/pollService";
 
 function BoozyTunes(props) {
   
@@ -32,7 +33,7 @@ console.log(drinkData)
 
     <button>Continue</button> <br></br><button>Cancel</button>
 
-    <form action= "submit" method="POST">
+    {/* <form action= "submit" method="POST">
     <select>
         <button>Yes</button>
       <option value="Yes">Yes</option>
@@ -45,7 +46,7 @@ console.log(drinkData)
       
     </select>
 
-    </form>
+    </form> */}
     </>
    );
 }

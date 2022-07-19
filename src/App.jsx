@@ -14,7 +14,7 @@ import ProfileDetails from './pages/ProfileDetails/ProfileDetails'
 import MyPageDetails from './pages/MyPageDetails/MyPageDetails'
 import EditProfile from './pages/EditProfile/EditProfile'
 import { drinks } from './data/drink-data'
-import BoozyTunes from './pages/BoozyTunes/BoozyTunes'
+import BoozyTunes from './pages/BoozyTunesGame/BoozyTunesGame'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
