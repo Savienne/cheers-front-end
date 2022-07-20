@@ -1,34 +1,37 @@
 import React, { useEffect, useState } from "react";
 import * as pollService from "../../services/pollService";
 import { drinks } from "../../data/drink-data"
-function BoozyTunes(props) {
-  
+
+
+function BoozyTunesGame(props) {
+  console.log(props.songs)
   const [songData, setSongData] = useState([]);
   const [drinkData, setDrinkData] = useState([]);
   
-  useEffect(() => {
+  // useEffect(() => {
     
-    const fetchDrinkData = async () => {
-      const response = await fetch (``);
-      console.log(response)
-      const newDrinkData = response.json();
-      console.log(newDrinkData)
-      setDrinkData(newDrinkData)
-    };
-    const fetchSongData = async () => {
-      const response = await fetch (`cors.anywhere/https://www.theaudiodb.com/api/v1/json`);
-      const newSongData =  await response.json();
-      setSongData(newSongData)
-    }
-    fetchDrinkData();
-    fetchSongData();
-  }, []);
+  //   const fetchDrinkData = async () => {
+  //     const response = await fetch (``);
+  //     console.log(response)
+  //     const newDrinkData = response.json();
+  //     console.log(newDrinkData)
+  //     setDrinkData(newDrinkData)
+  //   };
+  //   const fetchSongData = async () => {
+  //     const response = await fetch (`cors.anywhere/https://www.theaudiodb.com/api/v1/json`);
+  //     const newSongData =  await response.json();
+  //     setSongData(newSongData)
+  //   }
+  //   fetchDrinkData();
+  //   fetchSongData();
+  // }, []);
 
 // console.log(songData)
 // console.log(drinkData)
 
   return ( 
     <>
+    <h1>hdjdgjdhgjj</h1>
     <h1>Boozy Tunes</h1>
     <h2> Boozy Tunes Results</h2>
     <h3> 60% of users said YES, THIS SONG goes with THIS DRINK</h3>
@@ -60,4 +63,4 @@ function BoozyTunes(props) {
    )
 }
  
-  export default BoozyTunes;
+  export default BoozyTunesGame;
