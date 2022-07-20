@@ -11,14 +11,14 @@ function BoozyTunesGame(props) {
   useEffect(() => {
     
     const fetchDrinkData = async () => {
-      const response = await fetch (``);
+      const response = await fetch (`drinks`);
       console.log(response)
       const newDrinkData = response.json();
       console.log(newDrinkData)
       setDrinkData(newDrinkData)
     };
     const fetchSongData = async () => {
-      const response = await fetch (`cors.anywhere/https://www.theaudiodb.com/api/v1/json`);
+      const response = await fetch (`songs`);
       const newSongData =  await response.json();
       setSongData(newSongData)
     }
@@ -38,7 +38,7 @@ function BoozyTunesGame(props) {
     <p>This list of drinks</p>
     {props.drinks.map(drink => 
       {
-        return <p>{drink.name}</p>
+        return <p>{props.drinks}</p>
       }
 
       )}
