@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as pollService from "../../services/pollService";
-import { drinks } from "../../data/drink-data"
+// import { drinks } from "../../data/drink-data"
 
 
 function BoozyTunesGame(props) {
@@ -36,7 +36,7 @@ function BoozyTunesGame(props) {
     <h2> Boozy Tunes Results</h2>
     <h3> 60% of users said YES, THIS SONG goes with THIS DRINK</h3>
     <p>This list of drinks</p>
-    {drinks.map(drink => 
+    {props.drinks.map(drink => 
       {
         return <p>{drink.name}</p>
       }
