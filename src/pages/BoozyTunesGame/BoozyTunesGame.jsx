@@ -8,23 +8,23 @@ function BoozyTunesGame(props) {
   const [songData, setSongData] = useState([]);
   const [drinkData, setDrinkData] = useState([]);
   
-  // useEffect(() => {
+  useEffect(() => {
     
-  //   const fetchDrinkData = async () => {
-  //     const response = await fetch (``);
-  //     console.log(response)
-  //     const newDrinkData = response.json();
-  //     console.log(newDrinkData)
-  //     setDrinkData(newDrinkData)
-  //   };
-  //   const fetchSongData = async () => {
-  //     const response = await fetch (`cors.anywhere/https://www.theaudiodb.com/api/v1/json`);
-  //     const newSongData =  await response.json();
-  //     setSongData(newSongData)
-  //   }
-  //   fetchDrinkData();
-  //   fetchSongData();
-  // }, []);
+    const fetchDrinkData = async () => {
+      const response = await fetch (``);
+      console.log(response)
+      const newDrinkData = response.json();
+      console.log(newDrinkData)
+      setDrinkData(newDrinkData)
+    };
+    const fetchSongData = async () => {
+      const response = await fetch (`cors.anywhere/https://www.theaudiodb.com/api/v1/json`);
+      const newSongData =  await response.json();
+      setSongData(newSongData)
+    }
+    fetchDrinkData();
+    fetchSongData();
+  }, []);
 
 // console.log(songData)
 // console.log(drinkData)
